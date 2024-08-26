@@ -10,10 +10,12 @@ function App() {
     <BrowserRouter>
       <div>
         <Navbar />
-        <Routes>
+        <div style={{margin:"100px", marginBottom:"50px"}}>
+        <Routes className="mt-5">
           <Route exact path="/" element={<ProductCard />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>
+        </div>
       </div>
     </BrowserRouter>
   );

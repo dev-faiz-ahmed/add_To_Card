@@ -42,7 +42,7 @@ export default function App() {
 
 
   return (
-    <MDBNavbar light bgColor="light">
+    <MDBNavbar light bgColor="light" className="fixed-top">
       <MDBContainer fluid>
         <Link to='/'>
         <img src={logo} style={{height:40}}></img>
