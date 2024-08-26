@@ -5,7 +5,7 @@ import {
   MDBNavbarBrand,
   MDBBtn,
 } from "mdb-react-ui-kit";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { getCartTotal, setSearchQuery } from "../features/cartSlice";
@@ -16,6 +16,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import logo from "../images/ecommerce_logo.png"
 import SearchIcon from '@mui/icons-material/Search';
 import SearchBox from "./SearchBox";
+import "../App.css"
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -44,9 +45,14 @@ export default function App() {
   return (
     <MDBNavbar light bgColor="light" className="fixed-top">
       <MDBContainer fluid>
+        <div className="d-flex ms-3">
         <Link to='/'>
         <img src={logo} style={{height:40}}></img>
         </Link>
+        <NavLink to='/' className="products" activeClassName="active">
+        Products
+        </NavLink>
+        </div>
         {/* <span>
           <Link to="/">All Product </Link>
           </span> */}
